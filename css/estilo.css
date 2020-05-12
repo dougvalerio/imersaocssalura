@@ -1,13 +1,44 @@
+/* reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: url("https://www.uniabeu.edu.br/wp-content/uploads/revslider/home-page/fundo.png");
+  background: url("../img/fundo.jpg");
   background-size: auto 100vh;
   font-family: arial;
-  height: 100vh
-    ;
+  height: 100vh;
+  font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estilos estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
-  background-color: white;
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul {
@@ -19,8 +50,13 @@ body {
   list-style: none;
 }
 
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
 a {
-  color: teal;
+  color: white;
   text-decoration: none; 
 }
 
@@ -33,6 +69,18 @@ a:hover {
   text-align: center;
 }
 
-.site-subtitle{
+.site-title {
+  color: black;
+  font-size: 4em;
+}
+
+.site-subtitle {
+  text-shadow: 2px 4px 7px black;
   font-style: italic; 
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
+  border: 7px solid black;
 }
