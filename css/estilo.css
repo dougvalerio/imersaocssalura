@@ -8,7 +8,8 @@
 body {
   background: url("../img/fundo.jpg");
   background-size: auto 100vh;
-  font-family: arial;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   height: 100vh;
   font-size: 12px;
 }
@@ -28,7 +29,7 @@ body {
 }
 
 header {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,16 +72,89 @@ a:hover {
 
 .site-title {
   color: black;
-  font-size: 4em;
+  font-size: 7em;
+  text-shadow: 2px 4px 7px white;
+  font-family: 'Londrina Shadow', cursive;
 }
 
 .site-subtitle {
   text-shadow: 2px 4px 7px black;
-  font-style: italic; 
+  font-size: 2em;
+  font-style: italic;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.portfolio {
+  padding: 2em;
+  background-color: black;
+  background-size: 100vw 100vh;
+  border: 0.5em solid white;
+}
+
+.portfolio h2 {
+  color: white;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Archivo Black', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+  grid-template-columns: 240px 240px;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 8em - 48px);
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+  grid-template-columns: 400px 400px;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 8em - 48px);
+  }
+}
+
+/* Feito na aula
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+  grid-template-columns: repeat(3, 240px);
+  justify-content: center;
+}
+
+*/
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
   height: 180px;
-  width: 180px;
-  border: 7px solid black;
+  width: 240px;
+  object-fit: cover;
+  border: 7px solid white;
+}
+
+
+@media (min-width: 880px) {
+  .img-portfolio {
+  height: 280px;
+  width: 340px;
+  object-fit: cover;
+  border: 7px solid white;
+}
+}
+
+
+.portfolio .grid figcaption {
+  color: white;
 }
