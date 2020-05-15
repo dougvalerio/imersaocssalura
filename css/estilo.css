@@ -41,6 +41,7 @@ header {
   width: 100vw;
   top: 0;
   z-index: 1;
+  border-bottom: 0.1em solid white;
 }
 
 .menu ul {
